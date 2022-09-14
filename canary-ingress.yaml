@@ -26,6 +26,7 @@ spec:
   ingressClassName: nginx
   rules:
   - http:
+    host: ilia-cluster.devops.cf-cd.com
       paths:
       - path: /
         pathType: Prefix
