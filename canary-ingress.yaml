@@ -1,21 +1,3 @@
-# apiVersion: networking.k8s.io/v1beta1
-# kind: Ingress
-# metadata:
-#   name: canary-demo
-#   annotations:
-#     ingress.kubernetes.io/proxy-body-size: 100M
-#     kubernetes.io/ingress.class: nginx
-#     ingress.kubernetes.io/app-root: /
-# spec:
-#   rules:
-#   - host: ilia-cluster.devops.cf-cd.com/
-#     http:
-#       paths:
-#       - path: /
-#         backend:
-#           serviceName: canary-demo
-#           servicePort: 80
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -25,8 +7,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
-    host: ilia-cluster.devops.cf-cd.com
+  - host: ilia-cluster.devops.cf-cd.com
+    http:
       paths:
       - path: /
         pathType: Prefix
