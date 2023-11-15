@@ -3,9 +3,9 @@ kind: Ingress
 metadata:
   name: canary-demo
   annotations:
-    ingress.kubernetes.io/app-root: /
+    #ingress.kubernetes.io/app-root: /
     alb.ingress.kubernetes.io/certificate-arn: >-
-      arn:aws:acm:us-east-1:541403445101:certificate/4cce379c-9ac2-4b58-948b-db42ec95b02d
+      arn:aws:acm:us-east-1:541403445101:certificate/f2cb8b57-0a21-452b-bbf4-d80cfab3eb4d
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     kubernetes.io/ingress.class: alb
